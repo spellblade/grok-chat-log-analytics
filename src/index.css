@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Cinzel", Georgia, serif;
+
+  --color-elegant-bg: #080808;
+  --color-elegant-panel: #121212;
+  --color-elegant-card: #181818;
+  --color-elegant-hover: #1c1c1c;
+  --color-elegant-border: #1f1f1f;
+  --color-elegant-border-light: #2d2d2d;
+  
+  --color-elegant-gold: #c5a880;
+  --color-elegant-gold-light: #dfcaa7;
+  --color-elegant-gold-dark: #8f7451;
+  --color-elegant-accent: #c5a880;
+  
+  --color-elegant-text: #e0e0e0;
+  --color-elegant-muted: #8c8c8c;
+  --color-elegant-dark: #050505;
+  
+  --animate-fade-in: fade-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-slide-down: slide-down 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes slide-down {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+@utility text-xxs {
+  font-size: 0.6875rem;
+  line-height: 1rem;
+}
+
+@utility text-xxxs {
+  font-size: 0.6rem;
+  line-height: 0.85rem;
+}
+
+@utility bg-slate-850 {
+  background-color: #181818;
+}
+
+@utility border-slate-750 {
+  border-color: #2d2d2d;
+}
+
+/* Custom Scrollbar styling for Elegant Dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
+
