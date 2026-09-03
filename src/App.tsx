@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import appVersion from '../VERSION?raw';
 import { Conversation } from './types';
 import { SAMPLE_CONVERSATIONS } from './data/sampleData';
 import { parseUploadedJson, aggregateAnalytics, repairConversationMessages } from './utils/parser';
@@ -35,6 +36,7 @@ import {
 const STORAGE_KEY = 'grok_analyzer_conversations_v1';
 
 export default function App() {
+  const version = appVersion.trim();
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<'dashboard' | 'explorer'>('dashboard');
@@ -496,7 +498,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="text-base font-display font-bold text-white tracking-wide uppercase">
-                Grok Chat Log Analytics
+                Grok Chat Log Analytics v{version}
               </h1>
               <p className="text-xxs text-elegant-gold/80 font-mono tracking-widest uppercase">
                 Analyze usage patterns & search historical logs
